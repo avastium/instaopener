@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InstaOpener</title>
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <textarea rows="25" cols="35" id="textarea_logins" class="textarea"></textarea>
+    <br>
+    <input type="radio" name="open" id="radio1" onclick="disableSelectList()" checked>
+    <label for="radio1">Открыть всех пользователей</label>
+    <br>
+    <input type="radio" name="open" id="radio2" onclick="enableSelectList()">
+    <label for="radio2">Открывать по
+    <select id="users_amount">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+    </select> пользователей</label>
+    <br>
+    <input type="radio" name="open" id="radio3" onclick="disableSelectList()">
+    <label for="radio3">Получить только ссылки</label>
+    <br>
+    <input type="button" value="Старт" onclick="startScript()" id="start_button" class="start-button">
+    <ul id="links_list" class="links-list"></ul>
+  </div>
+  <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
